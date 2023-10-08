@@ -3,6 +3,13 @@ on:
   pull_request:
     types: [opened, edited]
   workflow_dispatch:
+  push:
+    branches: 
+      - master
+      - 'dev-*' # any charactes except slash dev-new, dev-this-is-new
+      - 'feat/**' #** with slashes /feat/new feat/new/button  
+    paths-ignore:
+      - '/github/workflows/*'
 jobs:
   deploy:
     runs-on: ubuntu-latest
