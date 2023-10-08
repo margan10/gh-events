@@ -1,11 +1,11 @@
 name: Events Demo 1
 on: 
   pull_request:
-    types: [opened, edited]
+    types: [opened, edited] #this is activity type, not all events have it
   workflow_dispatch:
   push:
     branches: 
-      - master
+      - master #this is filter type
       - 'dev-*' # any charactes except slash dev-new, dev-this-is-new
       - 'feat/**' #** with slashes /feat/new feat/new/button  
     paths-ignore:
