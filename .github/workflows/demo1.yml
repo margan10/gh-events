@@ -10,6 +10,7 @@ on:
       - 'feat/**' #** with slashes /feat/new feat/new/button  
     paths-ignore:
       - '/github/workflows/*'
+      # u can skip workflow by adding some massages to commit like [skip ci] or [skip actions] etc.
 jobs:
   deploy:
     runs-on: ubuntu-latest
